@@ -1,174 +1,279 @@
-/* Reset básico */
+@charset "UTF-8";
+
+/*
+    Paleta de cores:
+     body   background: #e8e6e7
+     header background: #1d1d1f
+     .navigation ul li a: #888
+     .navigation ul li a:hover: #fff
+     #green: #384937
+
+*/
+
+/* Reset da página */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
 }
 
-/* Estilos para o corpo */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background: #e8e6e7;
 }
 
-/* Navegação */
+header {
+    padding: 20px 70px;
+    background: #1d1d1f;
+}
+
 .navigation {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #333;
+    justify-content: space-between;
 }
 
 .navigation .logo {
-    height: 50px;
+    width: 20px;
 }
 
 .navigation ul {
-    list-style: none;
     display: flex;
-}
-
-.navigation ul li {
-    margin: 0 15px;
+    align-items: center;
+    gap: 60px;
 }
 
 .navigation ul li a {
+    color: #888;
+    font-weight: 600;
+    padding-bottom: 4px;
+    transition: all 0.3s ease-in-out; 
+}
+
+.navigation ul li a:hover {
     color: #fff;
-    text-decoration: none;
+    border-bottom: 1px solid #fff;
 }
 
-.navigation ul li a.check {
-    color: #4caf50;
+.navigation .check {
+    color: #fff;
+    border-bottom: 1px solid #fff;
 }
 
-/* Estilos principais */
-main {
+/* Main */
+main section {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: space-between;
+    padding: 5rem 10rem;
 }
 
-.circle {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: #445c42;
-    position: absolute;
-    top: 50%;
-    left: 15%;
-    transform: translateY(-50%);
-    z-index: -1;
-}
-
-.main-text {
-    max-width: 600px;
+.main-text img {
+    width: 15rem;
+    margin-bottom: 3vh;
 }
 
 .main-text h3 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
 }
 
 .main-text p {
-    font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 }
 
 .main-text h6 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    color: #999;
+    font-size: 1rem;
+    margin-bottom: 2rem;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
+.main-text .btn {
+    padding: 10px 25px;
+    background: #0071e3;
+    border-radius: 20px;
     color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+    font-size: 1.5rem;
+    transition: all 0.5s;
 }
 
-.content span {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
+.main-text .btn:hover {
+    opacity: .85;
+}
+
+.main-text .text {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.main-text .content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-text .content span {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    margin: 10px;
     cursor: pointer;
+    box-shadow: 1px 1px #888;
+    transition: all 0.5s;
+}
+
+.main-text .content span:hover {
+    opacity: .80;
+}
+
+#grenn {
+    background: #384937;
+}
+
+#pink {
+    background: #f8ddd6;
+}
+
+#blue {
+    background: #225f7e;
+}
+
+#black {
+    background: #192028;
+}
+
+#white {
+    background: #f7f2ee;
+}
+
+#red {
+    background: #ae0617;
+}
+
+.main-img {
+    transition: all 1s ease;
+    z-index: 100;
 }
 
 .main-img img {
-    max-width: 100%;
-    height: auto;
+    width: 500px;
+    transform: rotate(-7deg);
 }
 
-/* Tornando o layout responsivo */
-@media screen and (max-width: 768px) {
-    .navigation ul {
-        flex-direction: column;
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #445c42;
+    clip-path: circle(800px at right 1000px);
+}
+
+/* Responsividade */
+
+/* Para telas de até 1024px (tablets e pequenos notebooks) */
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 20px 50px;
     }
 
-    main {
+    main section {
+        padding: 4rem 6rem;
+    }
+
+    .main-text h3 {
+        font-size: 2.8rem;
+    }
+
+    .main-text p {
+        font-size: 1rem;
+    }
+
+    .main-img img {
+        width: 400px;
+    }
+
+    .circle {
+        clip-path: circle(600px at right 800px);
+    }
+}
+
+/* Para telas de até 768px (telas médias, como tablets) */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px 30px;
+    }
+
+    .navigation ul {
+        gap: 30px;
+    }
+
+    main section {
         flex-direction: column;
-        padding: 20px;
+        padding: 3rem 4rem;
         text-align: center;
+    }
+
+    .main-text img {
+        width: 12rem;
+    }
+
+    .main-text h3 {
+        font-size: 2.5rem;
+    }
+
+    .main-img img {
+        width: 350px;
+        transform: rotate(0);
     }
 
     .circle {
         display: none;
     }
-
-    .main-text {
-        margin-bottom: 30px;
-    }
-
-    .main-text h3 {
-        font-size: 28px;
-    }
-
-    .main-text p {
-        font-size: 16px;
-    }
-
-    .main-img img {
-        max-width: 80%;
-    }
 }
 
+/* Para telas de até 480px (smartphones) */
 @media screen and (max-width: 480px) {
-    .navigation ul {
-        flex-direction: column;
-        padding: 0;
+    header {
+        padding: 20px;
     }
 
-    .navigation ul li {
-        margin: 10px 0;
+    .navigation ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navigation .logo {
+        width: 40px;
+    }
+
+    main section {
+        padding: 2rem;
     }
 
     .main-text h3 {
-        font-size: 24px;
+        font-size: 2rem;
     }
 
     .main-text p {
-        font-size: 14px;
+        font-size: 0.9rem;
     }
 
     .main-img img {
-        max-width: 70%;
+        width: 280px;
     }
 
-    .content span {
-        width: 20px;
-        height: 20px;
+    .main-text .btn {
+        font-size: 1.2rem;
+        padding: 8px 20px;
     }
 
-    .btn {
-        padding: 8px 16px;
-        font-size: 14px;
+    .main-text .content span {
+        width: 30px;
+        height: 30px;
     }
 }
