@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+/*
+    Paleta de cores:
+     body   background: #e8e6e7
+     header background: #1d1d1f
+     .navigation ul li a: #888
+     .navigation ul li a:hover: #fff
+     #green: #384937
+
+*/
+
+/*Reset da página*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body {
+    background: #e8e6e7;
+}
+
+header {
+    padding: 20px 70px;
+    background: #1d1d1f;
+}
+
+.navigation {  /*Classe em CSS começa com ponto*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navigation .logo {  /*Classe em CSS começa com ponto*/
+    width: 20px;
+
+}
+
+.navigation ul {   /*Classe em CSS começa com ponto*/
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.navigation ul li a {  /*Classe em CSS começa com ponto*/
+    color: #888;
+    font-weight: 600;
+    padding-bottom: 4px;
+    transition: all 0.3s ease-in-out; 
+}
+
+.navigation ul li a:hover {   /*Classe em CSS começa com ponto*/
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.navigation .check {   /*Classe em CSS começa com ponto*/
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+/*Main*/
+
+main section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 10rem;
+}
+
+.main-text img {   /*Classe em CSS começa com ponto*/
+    width: 15rem;
+    margin-bottom: 3vh;
+
+}
+
+.main-text h3 {   /*Classe em CSS começa com ponto*/
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.main-text p {   /*Classe em CSS começa com ponto*/
+    margin-bottom: 1.5rem;
+}
+
+.main-text h6 {   /*Classe em CSS começa com ponto*/
+    color: #999;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.main-text .btn {   /*Classe em CSS começa com ponto*/
+    padding: 10px 25px;
+    background: #0071e3;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}
+
+.main-text .btn:hover {   /*Classe em CSS começa com ponto*/
+    opacity: .85;
+}
+
+.main-text .text {   /*Classe em CSS começa com ponto*/
+    font-size: 1rem;
+    color: #444;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.main-text .content {  /*Classe em CSS começa com ponto*/
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-text .content span {   /*Classe em CSS começa com ponto*/
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 1px 1px #888;
+    transition: all 0.5s;
+}
+
+.main-text .content span:hover {   /*Classe em CSS começa com ponto*/
+    opacity: .80;
+}
+
+#grenn {   /*ID em CSS começa com hashtag*/
+    background: #384937;
+}
+
+#pink {   /*ID em CSS começa com hashtag*/
+    background: #f8ddd6;
+}
+
+#blue {   /*ID em CSS começa com hashtag*/
+    background: #225f7e;
+}
+
+#black {   /*ID em CSS começa com hashtag*/
+    background: #192028;
+}
+
+#white {   /*ID em CSS começa com hashtag*/
+    background: #f7f2ee;
+}
+
+#red {   /*ID em CSS começa com hashtag*/
+    background: #ae0617;
+}
+
+.main-img {   /*Classe em CSS começa com ponto*/
+    transition: all 1s ease;
+    z-index: 100;
+}
+
+.main-img img{   /*Classe em CSS começa com ponto*/
+    width: 500px;
+    transform: rotate(-7deg);
+}
+
+.circle {   /*Classe em CSS começa com ponto*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #445c42;
+    clip-path: circle(800px at right 1000px);
+}
